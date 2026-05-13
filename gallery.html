@@ -1,0 +1,241 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Galeri Kejutan Meysha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#cdcd00",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e0e0ff",
+                        "primary-container": "#ffff00",
+                        "outline-variant": "#cac8aa",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#79785f",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#eaea00",
+                        "tertiary": "#343dff",
+                        "tertiary-container": "#f8f5ff",
+                        "secondary-fixed": "#ffd8e6",
+                        "tertiary-fixed-dim": "#bec2ff",
+                        "on-primary-container": "#757500",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#484831",
+                        "on-secondary-container": "#6c0042",
+                        "surface-tint": "#626200",
+                        "secondary-container": "#fd68b3",
+                        "primary": "#626200",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#8c0058",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb0d0",
+                        "on-primary-fixed-variant": "#494900",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-highest": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#505bff",
+                        "on-tertiary-fixed": "#00006e",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1d1d00",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary": "#ac2471",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#0000ef",
+                        "inverse-primary": "#cdcd00",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed": "#3d0024"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "2rem",
+                        "stack-xl": "4rem",
+                        "margin-page": "2rem",
+                        "gutter": "1rem",
+                        "offset-shadow": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Space Mono"],
+                        "headline-md": ["Anton"],
+                        "display-lg": ["Anton"],
+                        "body-md": ["Archivo Narrow"],
+                        "body-lg": ["Archivo Narrow"],
+                        "display-lg-mobile": ["Anton"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "16px", "letterSpacing": "1px", "fontWeight": "700" }],
+                        "headline-md": ["48px", { "lineHeight": "52px", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "90px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["56px", { "lineHeight": "60px", "letterSpacing": "1px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .halftone-bg {
+            background-image: radial-gradient(circle at center, #1a1c1c 1px, transparent 1.5px);
+            background-size: 8px 8px;
+        }
+        .stripe-bg {
+            background: repeating-linear-gradient(
+                45deg,
+                #ffff00,
+                #ffff00 10px,
+                #f9f9f9 10px,
+                #f9f9f9 20px
+            );
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee-container {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 1rem 1rem 1rem;
+            width: max-content;
+            animation: marquee 60s linear infinite;
+            animation-delay: -30s;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .marquee-item {
+            flex: 0 0 min(16rem, 70vw);
+            width: min(16rem, 70vw);
+            scroll-snap-align: start;
+        }
+        .marquee-item > div {
+            min-width: 100%;
+        }
+        @media (min-width: 768px) {
+            .marquee-item {
+                width: 20rem;
+            }
+        }
+    </style>
+<style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style></head>
+<body class="bg-surface text-on-surface min-h-screen relative overflow-x-hidden pt-28">
+<audio id="bg-music" controls loop preload="auto" class="fixed bottom-4 right-4 z-50 bg-surface-container-lowest border-4 border-black p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <source src="ASSET/audio/best-part.weba" type="audio/webm">
+    Your browser does not support the audio element.
+</audio> 
+<!-- Comic background overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] halftone-bg z-[-1]"></div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 flex flex-wrap justify-between items-center px-margin-page h-auto min-h-[80px] bg-primary-container dark:bg-primary docked full-width border-b-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+<div class="font-display-lg text-display-lg-mobile text-on-surface dark:text-surface-bright uppercase tracking-tighter">MEYSHAA B-DAY</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="home.html">HOME</a>
+<a class="font-headline-md text-headline-md uppercase text-on-surface dark:text-surface-bright border-b-4 border-on-surface pb-1 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="#">GALLERY</a>
+<a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="bonus.html">BONUS</a>
+</div>
+<button class="font-headline-md text-headline-md uppercase text-on-primary-container dark:text-on-primary bg-secondary-container border-4 border-on-surface px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none">WISHES</button>
+<div class="md:hidden flex flex-wrap justify-center gap-2 w-full pt-3">
+  <a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 border-4 border-on-surface bg-surface-container-lowest px-3 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" href="home.html">HOME</a>
+  <a class="font-headline-md text-headline-md uppercase text-on-surface dark:text-surface-bright border-4 border-on-surface bg-primary-container px-3 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" href="#">GALLERY</a>
+  <a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 border-4 border-on-surface bg-surface-container-lowest px-3 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" href="bonus.html">BONUS</a>
+</div>
+</nav>
+<main class="w-full max-w-7xl mx-auto px-4 md:px-margin-page pb-stack-xl mt-28 md:mt-0">
+<!-- Header Section -->
+<header class="mb-stack-xl relative mt-stack-md">
+<!-- Caption Box -->
+<div class="absolute -top-6 -left-4 bg-primary-container border-4 border-on-surface px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-[-2deg]">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">PAGE 02 // SURPRISE</span>
+</div>
+<div class="bg-surface-container-lowest border-4 border-on-surface p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden stripe-bg">
+<div class="relative z-10 bg-surface-container-lowest border-4 border-on-surface inline-block p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface uppercase m-0 leading-none">GALERI KEJUTAN MEYSHA</h1>
+</div>
+</div>
+</header>
+<!-- Horizontal Marquee Gallery Section -->
+<section class="mb-stack-xl relative border-4 border-on-surface bg-secondary-container shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] pt-6 pb-2 overflow-hidden">
+<div class="absolute -top-4 right-8 bg-primary-container border-4 border-on-surface px-4 py-2 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[5deg] z-10">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">X →</span>
+</div>
+<div class="marquee-container">
+    <!-- Foto dari ASSET/webp -->
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/1.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/2.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/3.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/4.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/5.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/6.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/7.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/8.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/9.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/10.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/11.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/12.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/13.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/14.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/15.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/16.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/17.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/18.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/19.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/20.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/21.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/22.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/23.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/24.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/25.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/26.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/27.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/28.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[1deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/29.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+    <span class="marquee-item w-64 md:w-80 aspect-square"><div class="w-full h-full border-4 border-on-surface bg-surface-container-lowest shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden relative rotate-[-2deg] hover:rotate-0 transition-transform duration-200"><img src="ASSET/webp/30.webp" alt="Foto Meysha" class="w-full h-full object-cover" /></div></span>
+</div>
+<!-- Bottom decorative line -->
+<div class="h-1 bg-on-surface w-full mt-4"></div>
+</section>
+<!-- Actions Section -->
+<section class="flex flex-col md:flex-row justify-between items-center gap-6 mt-stack-md">
+<a href="home.html" class="w-full md:w-auto bg-surface-container-lowest border-4 border-on-surface py-4 px-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-2 active:translate-y-2 active:shadow-none transition-all flex items-center justify-center gap-2 group" style="font-size: 24px;">
+<span class="material-symbols-outlined font-bold group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-headline-md leading-none text-on-surface uppercase">KEMBALI</span>
+</a>
+<a href="bonus.html" class="w-full md:w-auto bg-primary-container border-4 border-on-surface py-4 px-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-2 active:translate-y-2 active:shadow-none transition-all flex items-center justify-center gap-2 rotate-1 group" style="font-size: 24px;">
+<span class="font-headline-md leading-none text-on-surface uppercase">BONUS, TIDAK WAJIB DIBUKA</span>
+<span class="material-symbols-outlined font-bold group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t-4 border-on-surface mt-stack-xl bg-secondary dark:bg-secondary-fixed-dim flex flex-col md:flex-row justify-between items-center p-margin-page gap-gutter">
+<div class="font-headline-md text-on-secondary" style="font-size: 24px;">© 2026 FOR TITANIA MEYSHA ARLITA. NO REPRINTS.</div>
+<div class="flex flex-col md:flex-row gap-4 font-label-sm text-label-sm uppercase text-on-secondary dark:text-on-secondary-fixed text-center" style="font-size: 24px;">
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">INSTAGRAM</a>
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">CREDITS</a>
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">BACK TO TOP</a>
+</div>
+</footer>
+
+
+</body></html>
