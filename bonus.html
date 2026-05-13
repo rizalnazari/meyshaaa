@@ -1,0 +1,221 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Bonus Kejutan Meysha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Neubrutalism specific styles beyond Tailwind */
+        .halftone-bg {
+            background-image: radial-gradient(circle, #000 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+        .striped-bg {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px);
+        }
+        .starburst {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        /* Fixed Grid 12-col desktop, 4-col mobile */
+        .neubrutalist-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .neubrutalist-grid {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#cdcd00",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e0e0ff",
+                        "primary-container": "#ffff00",
+                        "outline-variant": "#cac8aa",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#79785f",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#eaea00",
+                        "tertiary": "#343dff",
+                        "tertiary-container": "#f8f5ff",
+                        "secondary-fixed": "#ffd8e6",
+                        "tertiary-fixed-dim": "#bec2ff",
+                        "on-primary-container": "#757500",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#484831",
+                        "on-secondary-container": "#6c0042",
+                        "surface-tint": "#626200",
+                        "secondary-container": "#fd68b3",
+                        "primary": "#626200",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#8c0058",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb0d0",
+                        "on-primary-fixed-variant": "#494900",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-highest": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#505bff",
+                        "on-tertiary-fixed": "#00006e",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1d1d00",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary": "#ac2471",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#0000ef",
+                        "inverse-primary": "#cdcd00",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed": "#3d0024"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "2rem",
+                        "stack-xl": "4rem",
+                        "margin-page": "2rem",
+                        "gutter": "1rem",
+                        "offset-shadow": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Space Mono"],
+                        "headline-md": ["Anton"],
+                        "display-lg": ["Anton"],
+                        "body-md": ["Archivo Narrow"],
+                        "body-lg": ["Archivo Narrow"],
+                        "display-lg-mobile": ["Anton"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "16px", "letterSpacing": "1px", "fontWeight": "700" }],
+                        "headline-md": ["48px", { "lineHeight": "52px", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "90px", "letterSpacing": "2px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["56px", { "lineHeight": "60px", "letterSpacing": "1px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style></head>
+<body class="bg-tertiary text-on-surface antialiased min-h-screen flex flex-col pt-20">
+<audio id="bg-music" controls loop preload="auto" class="fixed bottom-4 right-4 z-50 bg-surface-container-lowest border-4 border-black p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <source src="ASSET/audio/best-part.weba" type="audio/webm">
+    Your browser does not support the audio element.
+</audio> 
+<!-- TopNavBar Shared Component -->
+<nav class="bg-primary-container dark:bg-primary fixed top-0 w-full z-50 flex justify-between items-center px-margin-page h-20 border-b-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] docked full-width top-0">
+<div class="font-display-lg text-display-lg-mobile text-on-surface dark:text-surface-bright uppercase tracking-tighter hidden md:block" style="font-size: 32px; line-height: 1;">
+            TANIA B-DAY
+        </div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface dark:text-surface-bright uppercase tracking-tighter md:hidden" style="font-size: 24px; line-height: 1;">
+            TITANIA B-DAY
+        </div>
+<ul class="hidden md:flex gap-8">
+<li class="">
+<a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="home.html" style="font-size: 24px;">HOME</a>
+</li>
+<li class="">
+<a class="font-headline-md text-headline-md uppercase text-on-surface-variant dark:text-on-surface-variant opacity-80 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="gallery.html" style="font-size: 24px;">GALLERY</a>
+</li>
+<li class="">
+<a class="font-headline-md text-headline-md uppercase text-on-surface dark:text-surface-bright border-b-4 border-on-surface pb-1 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" href="bonus.html" style="font-size: 24px;">BONUS</a>
+</li>
+</ul>
+<button class="font-headline-md text-headline-md uppercase bg-secondary-container text-on-surface border-4 border-on-surface shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-4 py-1 hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1.5 active:translate-y-1.5 active:shadow-none" style="font-size: 20px;">
+            WISHES
+        </button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-margin-page neubrutalist-grid items-center relative overflow-hidden bg-tertiary">
+<!-- Background decorative elements -->
+<div class="absolute inset-0 halftone-bg opacity-20 pointer-events-none"></div>
+<!-- Floating Stars -->
+<div class="absolute top-10 left-10 starburst bg-primary-container w-24 h-24 border-4 border-on-surface z-0 rotate-12"></div>
+<div class="absolute bottom-20 right-10 starburst bg-secondary w-32 h-32 border-4 border-on-surface z-0 -rotate-12"></div>
+<div class="absolute top-1/2 left-4 w-8 h-8 bg-surface-container-lowest border-4 border-on-surface rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-0"></div>
+<div class="absolute top-1/4 right-20 w-12 h-12 bg-primary-container border-4 border-on-surface shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-0 rotate-45"></div>
+<!-- Central Secret Container -->
+<div class="col-span-4 md:col-span-8 md:col-start-3 bg-surface-container-lowest border-4 border-on-surface shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-8 relative z-10 -rotate-1 hover:rotate-0 transition-transform duration-300">
+<!-- Caption Box -->
+<div class="absolute -top-6 -left-6 bg-primary-container border-4 border-on-surface px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -rotate-3">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">SECRET_MESSAGE.TXT</span>
+</div>
+<!-- Content -->
+<div class="text-center flex flex-col items-center gap-stack-md mt-6">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase text-on-surface leading-tight">
+                    PSST...<br>INI RAHASIA!
+                </h1>
+<div class="w-full h-1 bg-on-surface my-4"></div>
+<div class="relative w-48 h-48 md:w-64 md:h-64 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-2 mx-auto bg-primary">
+<img alt="A festive birthday portrait of a young woman laughing in a brightly lit room filled with neon pink and yellow balloons. The style is raw, energetic, and slightly over-exposed, fitting a punk-rock celebration aesthetic. Heavy contrasts and vivid colors dominate the frame." class="w-full h-full object-cover filter contrast-125 saturate-150 grayscale-0" style="object-position: 50% 75%;" data-alt="A festive birthday portrait of a young woman laughing in a brightly lit room filled with neon pink and yellow balloons. The style is raw, energetic, and slightly over-exposed, fitting a punk-rock celebration aesthetic. Heavy contrasts and vivid colors dominate the frame." src="ASSET/webp/21.webp">
+<!-- Tape effect -->
+<div class="absolute -top-4 -left-4 w-12 h-4 bg-outline-variant opacity-80 transform -rotate-45"></div>
+<div class="absolute -bottom-4 -right-4 w-12 h-4 bg-outline-variant opacity-80 transform -rotate-45"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto border-4 border-on-surface p-4 bg-surface-container shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-left">
+                    "Selamat ulang tahun ya, Tania. Semoga tahun ini membawa banyak hal baik, kebahagiaan, dan kesehatan buat kamu. Mamas selalu mendoakan yang terbaik dari sini. Mamas tetap jadi support system buat kamu kapanpun itu. Tetap jadi pribadi yang baik ya, selamat ulang tahun! Stay awesome, Meysha! 💕"
+                </p>
+<a class="inline-block mt-4 bg-secondary font-headline-md text-headline-md uppercase text-on-secondary px-8 py-4 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-2 active:translate-y-2 active:shadow-none transition-all" href="#" style="font-size: 24px;">
+                    KEMBALI KE BERANDA
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-secondary dark:bg-secondary-fixed-dim w-full border-t-4 border-on-surface mt-stack-xl flex flex-col md:flex-row justify-between items-center p-margin-page gap-gutter">
+<div class="font-headline-md text-headline-md text-on-secondary" style="font-size: 24px;">
+            © 2026 FOR TITANIA MEYSHA ARLITA. NO REPRINTS.
+        </div>
+<ul class="flex flex-col md:flex-row gap-4 font-label-sm text-label-sm uppercase text-on-secondary dark:text-on-secondary-fixed text-center">
+<li class="">
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">INSTAGRAM</a>
+</li>
+<li class="">
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">CREDITS</a>
+</li>
+<li class="">
+<a class="hover:text-primary-container transition-colors cursor-pointer" href="#">BACK TO TOP</a>
+</li>
+</ul>
+</footer>
+
+
+</body></html>
